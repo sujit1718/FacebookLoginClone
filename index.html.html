@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <style>
+        .mdiv{
+            height: 100vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            padding: 100px;
+            background-color: lightgray;
+        }
+        .face{
+            color: #196ad4;
+            font-size: 6rem;
+            margin-bottom: 10px;
+            
+        }
+        .p{
+            font-weight:600;
+            font-family: solid;
+        }
+        .form{
+            width: 400px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            background: #fff;
+            margin-left: 250px;
+            box-shadow: 0px 0px 30px;
+            margin-top: 30px;
+        }
+        .i1 {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 15px;
+            font-size: 18px;
+            box-sizing: border-box;
+            border: 1px solid;
+            border-radius: 5px;
+            outline: none;
+        }
+        .i1:hover{
+            box-shadow: 0px 0px 1px 1px blue;
+        }
+        .i2 {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 15px;
+            font-size: 18px;
+            box-sizing: border-box;
+            border: 1px solid;
+            border-radius: 5px;
+            outline: none;
+        }
+        .i2:hover{
+            box-shadow: 0px 0px 1px 1px blue;
+        }
+        .btn1{
+            width: 100%;
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            padding: 13px 0;
+            cursor: pointer;
+            background: #166fe5;
+        }
+        .btn1:hover{
+            background: #1877f2;
+        }
+        .btn2{
+            color: #166fe5;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .btn2:hover{
+            text-decoration: underline;
+        }
+        .btn3{
+            margin-top: 25px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn3 a{
+           text-decoration: none;
+           color:#fff;
+           font-size: 15px;
+           padding: 15px 20px;
+           border-radius: 5px;
+           background: #36a420;
+           font-weight: 600;
+           display: inline;
+           margin-bottom: 5px;
+        }
+        .btn3 a:hover{
+            background: #42b72a;
+        } 
+        p{
+            font-size: 1.75rem;
+            white-space: nowrap;
+        }
+        hr{
+            border: 1px solid #dadde1;
+            margin-bottom: 15px;
+        }   
+       </style>
+</head>
+<body>
+    <div class="mdiv">
+        <table>
+            <tr>
+                <td>
+                    <h3 class="face">facebook</h3>
+                    <p class="p">Connect with friends and the world<br>
+                       around you on Facebook.
+                    </p>
+                </td>
+                
+                <td>
+                    <div class="form">
+                     <form>
+                        <input class="i1" type="text" name="username" placeholder="Email or phone number" required id="usr"><br>
+                        <input class="i2" type="password" name="pass" placeholder="Password" required id="pass"><br>
+                         <input type="button" name="btn" value="Login" class="btn1" onclick="validate()"><br>
+                         <a href="#" class="btn2">Forgot Password?</a><br> 
+                        <hr>
+                        <div class="btn3">
+                           <a href="#">Create new account</a>
+                        </div> 
+                     </form>
+                   </div> 
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let usr1="sujit";
+        let pass1="sujit123";
+
+        function validate() {
+            let usr2 = document.getElementById("usr").value;
+            let pass2 = document.getElementById("pass").value;
+
+            if((usr1===usr2)&&(pass1===pass2))
+            {
+                open('UserPage.html');
+            }
+            else{
+                alert("Wrong Username And Password");
+            }
+        }
+    </script>
+</body>
+</html>
